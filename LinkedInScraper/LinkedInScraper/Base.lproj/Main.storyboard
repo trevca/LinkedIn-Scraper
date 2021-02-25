@@ -50,24 +50,51 @@
                                     <action selector="goPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VHd-z7-DEB"/>
                                 </connections>
                             </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vga-dV-NXH">
+                                <rect key="frame" x="87" y="434" width="240" height="0.0"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="A9P-2A-0gp"/>
+                                    <constraint firstAttribute="height" id="TXb-j9-CqD"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="26A-3W-waf">
+                                <rect key="frame" x="20" y="444" width="374" height="398"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Vga-dV-NXH" firstAttribute="top" secondItem="U1p-h7-n1O" secondAttribute="bottom" constant="36" id="2Eh-lB-Tf4"/>
                             <constraint firstItem="gES-9V-mWG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Hi-Fm-YMP"/>
                             <constraint firstItem="U1p-h7-n1O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Vc-3J-5OE"/>
                             <constraint firstItem="6gS-Kf-1GJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bsw-TL-KiX"/>
                             <constraint firstItem="MAp-YD-BfJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hgc-Wt-JA3"/>
+                            <constraint firstItem="26A-3W-waf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NnK-mm-ljW"/>
                             <constraint firstItem="U1p-h7-n1O" firstAttribute="top" secondItem="gES-9V-mWG" secondAttribute="bottom" constant="20" id="Wbt-yF-ltW"/>
+                            <constraint firstItem="Vga-dV-NXH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YGO-Ud-DQq"/>
                             <constraint firstItem="gES-9V-mWG" firstAttribute="top" secondItem="MAp-YD-BfJ" secondAttribute="bottom" constant="127" id="bYD-Dh-vsb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="26A-3W-waf" secondAttribute="trailing" constant="20" id="cn3-3H-tSC"/>
                             <constraint firstItem="MAp-YD-BfJ" firstAttribute="top" secondItem="6gS-Kf-1GJ" secondAttribute="bottom" constant="19" id="d7J-bo-Apj"/>
                             <constraint firstItem="6gS-Kf-1GJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="fbd-pY-t9S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gES-9V-mWG" secondAttribute="trailing" constant="20" id="p0O-Ol-JRa"/>
+                            <constraint firstItem="26A-3W-waf" firstAttribute="top" secondItem="Vga-dV-NXH" secondAttribute="bottom" constant="10" id="sGR-Mw-wRF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="26A-3W-waf" secondAttribute="bottom" constant="20" id="tA6-xa-AMe"/>
                             <constraint firstItem="gES-9V-mWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="to3-F3-7gH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="TextLabel" destination="26A-3W-waf" id="TR5-v5-4ue"/>
                         <outlet property="URLTextField" destination="gES-9V-mWG" id="AnH-G3-JvL"/>
+                        <outlet property="WebView" destination="Vga-dV-NXH" id="nah-hO-8X2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,6 +103,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

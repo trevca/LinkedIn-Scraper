@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		F20C896E25E7328C009739A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20C896C25E7328C009739A0 /* LaunchScreen.storyboard */; };
 		F20C897925E7328C009739A0 /* LinkedInScraperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C897825E7328C009739A0 /* LinkedInScraperTests.swift */; };
 		F20C898425E7328D009739A0 /* LinkedInScraperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C898325E7328D009739A0 /* LinkedInScraperUITests.swift */; };
+		F20C899625E7360A009739A0 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = F20C899525E7360A009739A0 /* PythonKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20C899625E7360A009739A0 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = LinkedInScraper;
+			packageProductDependencies = (
+				F20C899525E7360A009739A0 /* PythonKit */,
+			);
 			productName = LinkedInScraper;
 			productReference = F20C895E25E73288009739A0 /* LinkedInScraper.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = F20C895525E73288009739A0;
+			packageReferences = (
+				F20C899425E7360A009739A0 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = F20C895F25E73288009739A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -427,7 +435,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -593,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F20C899425E7360A009739A0 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F20C899525E7360A009739A0 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F20C899425E7360A009739A0 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F20C895625E73288009739A0 /* Project object */;
 }
