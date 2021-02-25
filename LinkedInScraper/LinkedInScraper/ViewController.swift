@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import PythonKit
 import Foundation
 import WebKit
 
